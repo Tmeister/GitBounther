@@ -6,6 +6,9 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
+
+    <el-button type="primary" round>Info</el-button>
+
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
@@ -32,10 +35,16 @@
 </template>
 
 <script>
+import firebase from '../utils/FirebaseConfig';
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String,
+  },
+  created() {
+    console.log('firebase :', firebase);
+    firebase.auth().signInWithPopup(new firebase.auth.GithubAuthProvider());
   },
 };
 </script>
