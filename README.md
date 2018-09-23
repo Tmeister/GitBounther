@@ -59,3 +59,8 @@ export default new Vuex.Store({
 - [ ] Setup the keys and initialize Firebase
 - [ ] Configure the access mode in Firebase
   - [ ] Register a OAuth app on [GitHub](https://github.com/settings/applications/new)
+
+### Handle Auuthentication
+
+- [ ] Create a User Service
+- [ ] Create Authentication Module Store
